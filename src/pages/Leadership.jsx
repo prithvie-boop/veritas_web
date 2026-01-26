@@ -34,8 +34,8 @@ export default function Leadership() {
             <BentoGrid title="Meet Our Founder">
                 <BentoCard span={2} className="bento-card--light">
                     <div className="pill-tag">Founder & Principal Consultant</div>
-                    <h3 style={{ marginTop: 'var(--spacing-4)', fontSize: 'var(--font-size-4xl)' }}>
-                        Manmeet Sikka
+                    <h3 style={{ marginTop: 'var(--spacing-4)', fontSize: 'var(--font-size-3xl)' }}>
+                        Manmeit Sikka
                     </h3>
                     <p style={{ marginTop: 'var(--spacing-4)', fontSize: 'var(--font-size-xl)', maxWidth: '700px' }}>
                         With over <strong>27 years of experience</strong>, Manmeet Sikka has built, scaled, and led businesses across the global home category.

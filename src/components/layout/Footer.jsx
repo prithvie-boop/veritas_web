@@ -19,9 +19,12 @@ export default function Footer() {
                     </div>
 
                     <nav className="footer__nav">
+                        <Link to="/">Home</Link>
+                        <Link to="/about">About</Link>
                         <Link to="/services">Services</Link>
                         <Link to="/leadership">Leadership</Link>
                         <Link to="/products">Products</Link>
+                        <Link to="/why-veritas">Why Veritas</Link>
                         <Link to="/contact">Contact</Link>
                     </nav>
                 </div>
@@ -44,13 +47,13 @@ export default function Footer() {
                     <div className="footer__columns">
                         <div className="footer__col">
                             <h4>Contact Us</h4>
-                            <p>+91 98110 55555</p>
-                            <p>info@veritasconsulting.in</p>
+                            <p>+91-9811339092</p>
+                            <p>Manmeit@veritasconsulting.global</p>
                         </div>
                         <div className="footer__col">
                             <h4>Location</h4>
-                            <p>45/89, Okhla Phase III</p>
-                            <p>New Delhi, India</p>
+                            <p>Sigma 1, Greater Noida,</p>
+                            <p>Uttar Pradesh, India</p>
                         </div>
                     </div>
                 </div>

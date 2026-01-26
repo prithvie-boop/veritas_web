@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { ArrowUpRight, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import './Hero.css';
 
 export default function Hero({
@@ -102,12 +103,12 @@ export default function Hero({
                     >
                         {children || (
                             <>
-                                <a href="/contact" className="btn btn--primary">
+                                <Link to="/contact" className="btn btn--primary">
                                     Partner With Us <ArrowRight size={18} />
-                                </a>
-                                <a href="/services" className="btn btn--outline">
+                                </Link>
+                                <Link to="/services" className="btn btn--outline">
                                     Explore Services
-                                </a>
+                                </Link>
                             </>
                         )}
                     </motion.div>

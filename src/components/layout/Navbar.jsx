@@ -9,6 +9,7 @@ const navItems = [
   { label: 'About', path: '/about' },
   { label: 'Services', path: '/services' },
   { label: 'Products', path: '/products' },
+  { label: 'Leadership', path: '/leadership' },
   { label: 'Why Veritas', path: '/why-veritas' },
 ];
 

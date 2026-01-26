@@ -27,7 +27,7 @@ export default function Home() {
     ];
 
     const advantages = [
-        { text: "27+ years of leadership-driven execution", icon: TrendingUp },
+        { text: "Clear communication and integrity-driven execution", icon: TrendingUp },
         { text: "Deep product & category expertise across Home", icon: Box },
         { text: "Strong supplier ecosystems across India", icon: Globe },
         { text: "Robust quality, compliance, and risk frameworks", icon: ShieldCheck },
@@ -43,13 +43,13 @@ export default function Home() {
                 backgroundImage="/assets/images/pexels-cottonbro-6580549.jpg"
                 showFloatingCard={true}
                 floatingCardData={{
-                    label: "Years of Excellence",
-                    value: "27+",
+                    label: "7 Services",
+                    value: "We Specialize In",
                     description: "Leadership-Driven Execution"
                 }}
             />
 
-            <LogoBar title="Trusted by Global Brands" items={logos} />
+            <LogoBar title="Leadership Trusted by Global Brands" items={logos} />
 
             <BentoGrid title="End-to-End Solutions">
 
@@ -103,13 +103,13 @@ export default function Home() {
                             width: 'fit-content',
                             marginBottom: 'var(--spacing-4)'
                         }}>
-                            <TrendingUp size={28} color="var(--color-accent)" />
+                            <Briefcase size={28} color="var(--color-accent)" />
                         </div>
-                        <h2 style={{ fontSize: 'var(--font-size-6xl)', lineHeight: 1, marginBottom: 'var(--spacing-2)' }}>
-                            27+
+                        <h2 style={{ fontSize: 'var(--font-size-3xl)', lineHeight: 1.1, marginBottom: 'var(--spacing-2)' }}>
+                            7 Services
                         </h2>
                         <p style={{ fontWeight: 600, fontSize: 'var(--font-size-lg)' }}>
-                            Years of Excellence
+                            That We Specialize In
                         </p>
                     </div>
                     <p style={{ marginTop: 'auto', fontWeight: 500 }}>
