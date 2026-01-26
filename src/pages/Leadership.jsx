@@ -45,7 +45,7 @@ export default function Leadership() {
                         Her strength lies in connecting strategy to execution, ensuring plans don't stay on slides but translate into results on the ground.
                     </p>
 
-                    <a href="#" style={{
+                    <a href="https://www.linkedin.com/in/manmeit-sikka-7043125a/" target="_blank" rel="noopener noreferrer" style={{
                         display: 'inline-flex',
                         alignItems: 'center',
                         gap: 'var(--spacing-2)',

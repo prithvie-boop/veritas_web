@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { Hero, LogoBar, BentoGrid, BentoCard, FAQ } from '../components/sections';
 import { ArrowRight, ArrowUpRight, ShieldCheck, Box, TrendingUp, CheckCircle, Users, Globe, Briefcase } from 'lucide-react';
 
@@ -84,9 +85,9 @@ export default function Home() {
                         })}
                     </div>
 
-                    <button className="card-cta">
+                    <Link to="/why-veritas" className="card-cta" style={{ textDecoration: 'none' }}>
                         Learn More <ArrowRight size={16} />
-                    </button>
+                    </Link>
 
                     <div className="bento-icon-corner">
                         <Globe size={180} />
@@ -145,9 +146,9 @@ export default function Home() {
                         <p style={{ maxWidth: '600px', marginBottom: 'var(--spacing-8)', color: 'var(--color-text-secondary)' }}>
                             Our role goes beyond execution. We integrate merchandising, sourcing, quality, compliance, and logistics under one framework—eliminating fragmentation and reducing risk.
                         </p>
-                        <button className="card-cta" style={{ background: 'var(--color-primary)', color: 'var(--color-white)' }}>
+                        <Link to="/services" className="card-cta" style={{ background: 'var(--color-primary)', color: 'var(--color-white)', textDecoration: 'none' }}>
                             Our Services <ArrowRight size={16} />
-                        </button>
+                        </Link>
                     </div>
                     <div className="bento-card__icon">
                         <ArrowUpRight size={24} color="var(--color-primary)" />
