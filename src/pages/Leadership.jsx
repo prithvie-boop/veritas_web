@@ -101,18 +101,24 @@ export default function Leadership() {
 
             <BentoGrid title="Categories Worked Across">
                 {categories.map((cat, i) => (
-                    <BentoCard key={i} span={1} className="bento-card--light">
+                    <BentoCard key={i} span={1} className="bento-card--light" style={{ minHeight: '240px' }}>
                         <div style={{
-                            background: 'var(--color-primary)',
-                            padding: '12px',
+                            background: 'var(--color-accent-muted)',
+                            padding: '16px',
                             borderRadius: '50%',
                             width: 'fit-content',
-                            marginBottom: 'var(--spacing-4)',
-                            opacity: 0.1
+                            marginBottom: 'var(--spacing-6)'
                         }}>
-                            <Briefcase size={20} color="var(--color-primary)" />
+                            <Briefcase size={24} color="var(--color-primary)" />
                         </div>
-                        <h3 style={{ fontSize: 'var(--font-size-lg)', marginTop: 'auto', color: 'var(--color-primary)' }}>{cat}</h3>
+                        <h3 style={{
+                            fontSize: 'var(--font-size-lg)',
+                            fontWeight: 600,
+                            color: 'var(--color-primary)',
+                            marginTop: 'auto'
+                        }}>
+                            {cat}
+                        </h3>
                     </BentoCard>
                 ))}
             </BentoGrid>
