@@ -1,5 +1,5 @@
 import { Hero, LogoBar, BentoGrid, BentoCard, FAQ } from '../components/sections';
-import { ArrowRight, ArrowUpRight, ShieldCheck, Box, TrendingUp, CheckCircle, Users, Globe } from 'lucide-react';
+import { ArrowRight, ArrowUpRight, ShieldCheck, Box, TrendingUp, CheckCircle, Users, Globe, Briefcase } from 'lucide-react';
 
 export default function Home() {
     const logos = [
