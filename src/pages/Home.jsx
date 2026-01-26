@@ -94,25 +94,25 @@ export default function Home() {
                 </BentoCard>
 
                 {/* Card 2: Stats */}
-                <BentoCard span={1} className="bento-card--accent">
+                <BentoCard span={1} className="bento-card--light">
                     <div>
                         <div style={{
-                            background: 'var(--color-primary)',
+                            background: 'var(--color-accent-muted)',
                             padding: '14px',
                             borderRadius: '50%',
                             width: 'fit-content',
                             marginBottom: 'var(--spacing-4)'
                         }}>
-                            <Briefcase size={28} color="var(--color-accent)" />
+                            <Briefcase size={28} color="var(--color-primary)" />
                         </div>
-                        <h2 style={{ fontSize: 'var(--font-size-3xl)', lineHeight: 1.1, marginBottom: 'var(--spacing-2)' }}>
+                        <h2 style={{ fontSize: 'var(--font-size-3xl)', lineHeight: 1.1, marginBottom: 'var(--spacing-2)', color: 'var(--color-primary)' }}>
                             7 Services
                         </h2>
-                        <p style={{ fontWeight: 600, fontSize: 'var(--font-size-lg)' }}>
+                        <p style={{ fontWeight: 600, fontSize: 'var(--font-size-lg)', color: 'var(--color-text-primary)' }}>
                             That We Specialize In
                         </p>
                     </div>
-                    <p style={{ marginTop: 'auto', fontWeight: 500 }}>
+                    <p style={{ marginTop: 'auto', fontWeight: 500, color: 'var(--color-text-secondary)' }}>
                         Bridging Western design expectations with Indian manufacturing capabilities.
                     </p>
                 </BentoCard>
@@ -130,10 +130,10 @@ export default function Home() {
                 </BentoCard>
 
                 {/* Card 4: Dark Feature - Our Approach */}
-                <BentoCard span={2} className="bento-card--dark">
+                <BentoCard span={2} className="bento-card--light">
                     <div style={{ position: 'relative', zIndex: 10 }}>
                         <div style={{
-                            background: 'var(--color-accent)',
+                            background: 'var(--color-accent-muted)',
                             padding: '14px',
                             borderRadius: '50%',
                             width: 'fit-content',
@@ -141,16 +141,16 @@ export default function Home() {
                         }}>
                             <ShieldCheck size={28} color="var(--color-primary)" />
                         </div>
-                        <h3>We Plan. Build. Monitor. Improve.</h3>
-                        <p style={{ maxWidth: '600px', marginBottom: 'var(--spacing-8)' }}>
+                        <h3 style={{ color: 'var(--color-primary)' }}>We Plan. Build. Monitor. Improve.</h3>
+                        <p style={{ maxWidth: '600px', marginBottom: 'var(--spacing-8)', color: 'var(--color-text-secondary)' }}>
                             Our role goes beyond execution. We integrate merchandising, sourcing, quality, compliance, and logistics under one framework—eliminating fragmentation and reducing risk.
                         </p>
-                        <button className="card-cta" style={{ background: 'var(--color-accent)', color: 'var(--color-primary)' }}>
+                        <button className="card-cta" style={{ background: 'var(--color-primary)', color: 'var(--color-white)' }}>
                             Our Services <ArrowRight size={16} />
                         </button>
                     </div>
                     <div className="bento-card__icon">
-                        <ArrowUpRight size={24} />
+                        <ArrowUpRight size={24} color="var(--color-primary)" />
                     </div>
                 </BentoCard>
 
