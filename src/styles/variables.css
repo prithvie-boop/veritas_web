@@ -13,10 +13,10 @@
    --color-primary-light: #6a2e99;
    --color-primary-dark: #3a165a;
 
-   /* Accent - Electric Lime */
-   --color-accent: #D9F868;
-   --color-accent-hover: #E5FF7A;
-   --color-accent-muted: rgba(217, 248, 104, 0.15);
+   /* Accent - Light Lavender */
+   --color-accent: #D8B4FE;
+   --color-accent-hover: #E9D5FF;
+   --color-accent-muted: rgba(216, 180, 254, 0.15);
 
    /* Backgrounds - Warm Premium */
    --color-bg-main: #F5F5F0;
@@ -43,7 +43,7 @@
    --color-text-secondary: #525252;
    --color-text-muted: #737373;
    --color-text-light: #FFFFFF;
-   --color-text-on-accent: #1A2E14;
+   --color-text-on-accent: #52217c;
 
    /* Borders */
    --color-border: rgba(0, 0, 0, 0.06);
