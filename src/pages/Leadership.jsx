@@ -100,38 +100,47 @@ export default function Leadership() {
             </BentoGrid>
 
             <BentoGrid title="Categories Worked Across">
-                {categories.map((cat, i) => {
-                    const variants = ['dark', 'light', 'accent', 'dark'];
-                    const variant = variants[i % 4];
-                    const isDark = variant === 'dark';
-
-                    return (
-                        <BentoCard key={i} span={1} className={`bento-card--${variant}`}>
-                            <div style={{
-                                background: isDark ? 'var(--color-accent)' : 'var(--color-primary)',
-                                padding: '12px',
-                                borderRadius: '50%',
-                                width: 'fit-content',
-                                marginBottom: 'var(--spacing-4)'
-                            }}>
-                                <Briefcase size={20} color={isDark ? 'var(--color-primary)' : 'var(--color-accent)'} />
-                            </div>
-                            <h3 style={{ fontSize: 'var(--font-size-xl)', marginTop: 'auto' }}>{cat}</h3>
-                        </BentoCard>
-                    );
-                })}
+                {categories.map((cat, i) => (
+                    <BentoCard key={i} span={1} className="bento-card--light">
+                        <div style={{
+                            background: 'var(--color-primary)',
+                            padding: '12px',
+                            borderRadius: '50%',
+                            width: 'fit-content',
+                            marginBottom: 'var(--spacing-4)',
+                            opacity: 0.1
+                        }}>
+                            <Briefcase size={20} color="var(--color-primary)" />
+                        </div>
+                        <h3 style={{ fontSize: 'var(--font-size-lg)', marginTop: 'auto', color: 'var(--color-primary)' }}>{cat}</h3>
+                    </BentoCard>
+                ))}
             </BentoGrid>
 
             <BentoGrid title="Brands Worked With">
                 <BentoCard span={3} className="bento-card--light">
-                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: 'var(--spacing-3)' }}>
+                    <div style={{
+                        display: 'grid',
+                        gridTemplateColumns: 'repeat(auto-fill, minmax(180px, 1fr))',
+                        gap: 'var(--spacing-4)',
+                        alignItems: 'center'
+                    }}>
                         {brands.map((brand, i) => (
-                            <span key={i} className="pill-tag pill-tag--outline">
+                            <div key={i} style={{
+                                padding: 'var(--spacing-3) var(--spacing-4)',
+                                border: '1px solid var(--color-border)',
+                                borderRadius: 'var(--radius-full)',
+                                textAlign: 'center',
+                                fontSize: 'var(--font-size-sm)',
+                                fontWeight: 600,
+                                color: 'var(--color-text-secondary)',
+                                background: 'var(--color-bg-main)'
+                            }}>
                                 {brand}
-                            </span>
+                            </div>
                         ))}
                     </div>
-                    <p style={{ marginTop: 'var(--spacing-8)', color: 'var(--color-text-muted)' }}>
+                    <p style={{ marginTop: 'var(--spacing-8)', color: 'var(--color-text-muted)', textAlign: 'center' }}>
                         ...and many more.
                     </p>
                 </BentoCard>
