@@ -1,0 +1,83 @@
+.category-grid__title {
+    font-size: var(--font-size-3xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text-primary);
+    text-align: center;
+    margin-bottom: var(--spacing-12);
+    letter-spacing: var(--letter-spacing-tight);
+}
+
+.category-grid__groups {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-6);
+}
+
+.category-grid__group {
+    padding: var(--spacing-8);
+    background-color: var(--color-primary-light);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl);
+    transition: all var(--transition-normal);
+    display: flex;
+    flex-direction: column;
+}
+
+.category-grid__group:hover {
+    border-color: var(--color-accent);
+    box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+    transform: translateY(-5px);
+    background-color: var(--color-primary-lighter);
+}
+
+.category-grid__group-title {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text-primary);
+    padding-bottom: var(--spacing-4);
+    margin-bottom: var(--spacing-6);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.category-grid__items {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-3);
+}
+
+.category-grid__item {
+    font-size: var(--font-size-base);
+    color: var(--color-text-secondary);
+    padding: var(--spacing-2) var(--spacing-3);
+    border-radius: var(--radius-md);
+    transition: all var(--transition-fast);
+    display: flex;
+    align-items: center;
+}
+
+.category-grid__item:before {
+    content: '→';
+    opacity: 0;
+    margin-right: 0;
+    color: var(--color-accent);
+    transition: all var(--transition-fast);
+    width: 0;
+    overflow: hidden;
+}
+
+.category-grid__item:hover {
+    color: var(--color-accent);
+    background-color: rgba(100, 255, 218, 0.05);
+}
+
+.category-grid__item:hover:before {
+    opacity: 1;
+    margin-right: 8px;
+    width: 14px;
+}
+
+@media (max-width: 640px) {
+    .category-grid__groups {
+        grid-template-columns: 1fr;
+    }
+}

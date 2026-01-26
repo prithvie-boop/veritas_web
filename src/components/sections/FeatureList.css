@@ -1,0 +1,103 @@
+.feature-list {
+    background-color: var(--color-primary);
+    position: relative;
+    overflow: visible;
+    /* Allow floating elements to bleed */
+    padding: var(--spacing-32) 0;
+    /* More breathing room */
+}
+
+/* Background mesh for features */
+.feature-list::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(59, 130, 246, 0.1) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.feature-list__content {
+    position: relative;
+    z-index: 1;
+}
+
+.feature-list__title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 800;
+    color: var(--color-text-light);
+    margin-bottom: var(--spacing-20);
+    text-align: center;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.feature-list__deck {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--spacing-8);
+    perspective: 1000px;
+}
+
+.feature-list__card {
+    flex: 0 1 300px;
+    /* Base width */
+    min-width: 280px;
+}
+
+.feature-list__card-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: var(--spacing-10) var(--spacing-8);
+    background: rgba(17, 34, 64, 0.6);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    /* Thinner border */
+    border-radius: var(--radius-2xl);
+    box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+    height: 100%;
+}
+
+.feature-list__icon-wrapper {
+    margin-bottom: var(--spacing-6);
+    padding: var(--spacing-4);
+    background: linear-gradient(135deg, rgba(100, 255, 218, 0.1) 0%, rgba(59, 130, 246, 0.1) 100%);
+    border-radius: var(--radius-full);
+    box-shadow: 0 0 20px rgba(100, 255, 218, 0.2);
+}
+
+.feature-list__icon {
+    color: var(--color-accent);
+}
+
+.feature-list__text {
+    font-size: var(--font-size-lg);
+    font-weight: 500;
+    color: var(--color-text-primary);
+    line-height: 1.6;
+}
+
+.feature-list__footer {
+    margin-top: var(--spacing-24);
+    font-size: var(--font-size-2xl);
+    font-weight: 300;
+    color: var(--color-accent);
+    text-align: center;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.4;
+    letter-spacing: 0.02em;
+}
+
+@media (max-width: 768px) {
+    .feature-list__deck {
+        gap: var(--spacing-4);
+    }
+}

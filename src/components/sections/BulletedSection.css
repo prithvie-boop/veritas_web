@@ -1,0 +1,55 @@
+.bulleted-section {
+    background-color: var(--color-white);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.bulleted-section__content {
+    padding: var(--spacing-6);
+    background-color: var(--color-gray-50);
+    border-radius: var(--radius-lg);
+    border-left: 4px solid var(--color-accent);
+}
+
+.bulleted-section__title {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-primary);
+    margin-bottom: var(--spacing-3);
+}
+
+.bulleted-section__lead {
+    font-size: var(--font-size-base);
+    color: var(--color-text-secondary);
+    font-style: italic;
+    margin-bottom: var(--spacing-4);
+}
+
+.bulleted-section__bullets {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-2);
+    margin-bottom: var(--spacing-4);
+}
+
+.bulleted-section__bullets li {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-3);
+    font-size: var(--font-size-base);
+    color: var(--color-text-secondary);
+}
+
+.bulleted-section__bullets li svg {
+    flex-shrink: 0;
+    color: var(--color-accent);
+    margin-top: 2px;
+}
+
+.bulleted-section__footer {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-primary);
+    margin: 0;
+    padding-top: var(--spacing-4);
+    border-top: 1px solid var(--color-border);
+}

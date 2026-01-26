@@ -1,0 +1,410 @@
+/* Import Design System Variables */
+@import './variables.css';
+
+/* ===================================
+   Veritas Consulting - Global Styles
+   Solv Clone - Premium Foundation
+   =================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+/* ============================
+   RESET & BASE
+   ============================ */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+body {
+    font-family: var(--font-primary);
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-normal);
+    line-height: var(--line-height-relaxed);
+    color: var(--color-text-primary);
+    background-color: var(--color-bg-main);
+    overflow-x: hidden;
+}
+
+/* ============================
+   TYPOGRAPHY
+   ============================ */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-tight);
+    letter-spacing: var(--tracking-tight);
+    color: var(--color-text-primary);
+}
+
+h1 {
+    font-size: var(--font-hero);
+    font-weight: var(--font-weight-extrabold);
+    letter-spacing: var(--tracking-tighter);
+}
+
+h2 {
+    font-size: var(--font-display);
+    font-weight: var(--font-weight-bold);
+}
+
+h3 {
+    font-size: var(--font-heading);
+}
+
+h4 {
+    font-size: var(--font-subheading);
+}
+
+p {
+    font-size: var(--font-size-md);
+    line-height: var(--line-height-loose);
+    color: var(--color-text-secondary);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+a:hover {
+    color: var(--color-primary);
+}
+
+strong,
+b {
+    font-weight: var(--font-weight-semibold);
+}
+
+/* ============================
+   LAYOUT
+   ============================ */
+
+.container {
+    width: 100%;
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: 0 var(--spacing-8);
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 var(--spacing-6);
+    }
+}
+
+.section {
+    padding: var(--section-padding) 0;
+}
+
+/* ============================
+   BUTTONS - Solv Style Pills
+   ============================ */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-3);
+    height: 56px;
+    padding: 0 var(--spacing-8);
+    font-family: var(--font-primary);
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-semibold);
+    line-height: 1;
+    text-decoration: none;
+    border: none;
+    border-radius: var(--radius-full);
+    cursor: pointer;
+    transition: all var(--transition-normal);
+    white-space: nowrap;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+/* Primary Button - Lime */
+.btn--primary {
+    background-color: var(--color-accent);
+    color: var(--color-text-on-accent);
+    box-shadow: var(--shadow-sm);
+}
+
+.btn--primary:hover {
+    background-color: var(--color-accent-hover);
+    box-shadow: var(--shadow-md);
+    color: var(--color-text-on-accent);
+}
+
+/* Secondary Button - Dark */
+.btn--secondary {
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+}
+
+.btn--secondary:hover {
+    background-color: var(--color-primary-light);
+    color: var(--color-text-light);
+}
+
+/* Outline Button */
+.btn--outline {
+    background-color: transparent;
+    border: 1.5px solid var(--color-border-strong);
+    color: var(--color-text-primary);
+}
+
+.btn--outline:hover {
+    background-color: var(--color-gray-100);
+    border-color: var(--color-gray-300);
+}
+
+/* Large Button */
+.btn--lg {
+    height: 64px;
+    padding: 0 var(--spacing-10);
+    font-size: var(--font-size-md);
+}
+
+/* Small Button */
+.btn--sm {
+    height: 44px;
+    padding: 0 var(--spacing-6);
+    font-size: var(--font-size-sm);
+}
+
+/* ============================
+   PILL TAG
+   ============================ */
+
+.pill-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-2);
+    width: fit-content;
+    height: 32px;
+    padding: 0 var(--spacing-4);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-semibold);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-wider);
+    color: var(--color-text-on-accent);
+    background-color: var(--color-accent);
+    border-radius: var(--radius-full);
+}
+
+.pill-tag--dark {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--color-text-light);
+}
+
+.pill-tag--outline {
+    background-color: transparent;
+    border: 1px solid var(--color-border);
+    color: var(--color-text-secondary);
+}
+
+/* ============================
+   FORM ELEMENTS
+   ============================ */
+
+input,
+textarea,
+select {
+    width: 100%;
+    padding: var(--spacing-5) var(--spacing-6);
+    font-family: var(--font-primary);
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-text-light);
+    background-color: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: var(--radius-xl);
+    outline: none;
+    transition: all var(--transition-fast);
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+input:focus,
+textarea:focus {
+    background-color: rgba(255, 255, 255, 0.12);
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 3px var(--color-accent-muted);
+}
+
+/* Light variant for light backgrounds */
+.input--light,
+.input--light:focus {
+    color: var(--color-text-primary);
+    background-color: var(--color-white);
+    border-color: var(--color-border);
+}
+
+.input--light::placeholder {
+    color: var(--color-text-muted);
+}
+
+.input--light:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(26, 46, 20, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: var(--spacing-2);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-semibold);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-wider);
+    color: var(--color-accent);
+}
+
+/* ============================
+   CARDS - Base
+   ============================ */
+
+.card {
+    background-color: var(--color-bg-card);
+    border-radius: var(--radius-3xl);
+    border: 1px solid var(--color-border);
+    overflow: hidden;
+    transition: all var(--transition-normal);
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-card-hover);
+}
+
+/* ============================
+   UTILITIES
+   ============================ */
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-primary {
+    color: var(--color-text-primary);
+}
+
+.text-secondary {
+    color: var(--color-text-secondary);
+}
+
+.text-muted {
+    color: var(--color-text-muted);
+}
+
+.text-light {
+    color: var(--color-text-light);
+}
+
+.text-accent {
+    color: var(--color-accent);
+}
+
+.bg-primary {
+    background-color: var(--color-primary);
+}
+
+.bg-accent {
+    background-color: var(--color-accent);
+}
+
+.bg-white {
+    background-color: var(--color-white);
+}
+
+.bg-dark {
+    background-color: var(--color-bg-dark);
+}
+
+.font-medium {
+    font-weight: var(--font-weight-medium);
+}
+
+.font-semibold {
+    font-weight: var(--font-weight-semibold);
+}
+
+.font-bold {
+    font-weight: var(--font-weight-bold);
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* ============================
+   SELECTION
+   ============================ */
+
+::selection {
+    background-color: var(--color-accent);
+    color: var(--color-text-on-accent);
+}
+
+/* ============================
+   SCROLLBAR
+   ============================ */
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color-gray-100);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-gray-400);
+    border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-gray-500);
+}

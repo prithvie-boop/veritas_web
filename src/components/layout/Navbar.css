@@ -1,0 +1,227 @@
+/* ===================================
+   Navbar - Solv Premium Style
+   =================================== */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: var(--z-fixed);
+    padding: var(--spacing-4) 0;
+    transition: all var(--transition-normal);
+}
+
+/* Glassmorphism on scroll - applied via JS */
+.navbar--scrolled {
+    background-color: rgba(245, 245, 240, 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--color-border);
+    box-shadow: var(--shadow-sm);
+}
+
+.navbar__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+}
+
+/* Logo */
+.navbar__logo {
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+    text-decoration: none;
+    color: var(--color-primary);
+    transition: opacity var(--transition-fast);
+}
+
+.navbar__logo:hover {
+    opacity: 0.8;
+}
+
+/* On hero (dark bg), logo should be white */
+.navbar--transparent .navbar__logo {
+    color: var(--color-white);
+}
+
+.navbar__logo-text {
+    font-family: var(--font-primary);
+    font-weight: var(--font-weight-extrabold);
+    font-size: 1.5rem;
+    letter-spacing: var(--tracking-tighter);
+}
+
+.navbar__logo-sub {
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-medium);
+    letter-spacing: var(--tracking-wider);
+    opacity: 0.7;
+}
+
+/* Desktop Navigation */
+.navbar__nav {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-2);
+}
+
+.navbar__link {
+    position: relative;
+    padding: var(--spacing-3) var(--spacing-4);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    border-radius: var(--radius-lg);
+    transition: all var(--transition-fast);
+}
+
+.navbar__link:hover {
+    color: var(--color-text-primary);
+    background-color: rgba(0, 0, 0, 0.04);
+}
+
+.navbar__link--active {
+    color: var(--color-primary);
+    font-weight: var(--font-weight-semibold);
+}
+
+/* Transparent nav (on hero) */
+.navbar--transparent .navbar__link {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.navbar--transparent .navbar__link:hover {
+    color: var(--color-white);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.navbar--transparent .navbar__link--active {
+    color: var(--color-accent);
+}
+
+/* CTA Button in Nav */
+.navbar__cta {
+    margin-left: var(--spacing-4);
+}
+
+.navbar__cta .btn {
+    height: 44px;
+    padding: 0 var(--spacing-6);
+    font-size: var(--font-size-sm);
+}
+
+/* Mobile Toggle */
+.navbar__toggle {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background: transparent;
+    border: none;
+    border-radius: var(--radius-lg);
+    cursor: pointer;
+    color: var(--color-primary);
+    transition: all var(--transition-fast);
+}
+
+.navbar__toggle:hover {
+    background-color: rgba(0, 0, 0, 0.04);
+}
+
+.navbar--transparent .navbar__toggle {
+    color: var(--color-white);
+}
+
+.navbar--transparent .navbar__toggle:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Mobile Menu Overlay */
+.navbar__mobile-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: -1;
+}
+
+/* Mobile Menu Panel */
+.navbar__mobile {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    max-width: 400px;
+    height: 100vh;
+    background-color: var(--color-bg-card);
+    box-shadow: var(--shadow-2xl);
+    padding: var(--spacing-8);
+    overflow-y: auto;
+}
+
+.navbar__mobile-header {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: var(--spacing-8);
+}
+
+.navbar__mobile-close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background: var(--color-gray-100);
+    border: none;
+    border-radius: var(--radius-full);
+    cursor: pointer;
+    color: var(--color-text-primary);
+    transition: all var(--transition-fast);
+}
+
+.navbar__mobile-close:hover {
+    background: var(--color-gray-200);
+}
+
+.navbar__mobile-nav {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-2);
+}
+
+.navbar__mobile-link {
+    display: flex;
+    align-items: center;
+    padding: var(--spacing-5) var(--spacing-4);
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-text-primary);
+    text-decoration: none;
+    border-radius: var(--radius-xl);
+    transition: all var(--transition-fast);
+}
+
+.navbar__mobile-link:hover {
+    background-color: var(--color-gray-100);
+}
+
+.navbar__mobile-link--active {
+    color: var(--color-primary);
+    background-color: var(--color-accent-muted);
+    font-weight: var(--font-weight-semibold);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .navbar__nav {
+        display: none;
+    }
+
+    .navbar__toggle {
+        display: flex;
+    }
+}
