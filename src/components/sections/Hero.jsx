@@ -14,6 +14,7 @@ export default function Hero({
         value: "99.8%",
         description: "Year-over-Year Performance"
     },
+    className = "",
     children
 }) {
     const words = headline.split(" ");
@@ -42,7 +43,7 @@ export default function Hero({
     };
 
     return (
-        <section className="hero">
+        <section className={`hero ${className}`}>
             <div className="hero__media-layer">
                 <img
                     src={backgroundImage}

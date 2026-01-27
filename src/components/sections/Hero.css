@@ -42,6 +42,10 @@
     padding-bottom: var(--spacing-24);
 }
 
+.hero--extra-padding {
+    padding-top: var(--spacing-48);
+}
+
 .hero__content {
     max-width: 1100px;
 }
@@ -80,11 +84,12 @@
     display: inline-block;
     overflow: hidden;
     vertical-align: top;
+    padding: 0.2em 0.1em;
+    margin: -0.2em -0.1em;
 }
 
 .hero__word {
     display: inline-block;
-    padding-bottom: 0.05em;
 }
 
 /* Subtitle */

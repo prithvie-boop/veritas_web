@@ -25,6 +25,7 @@ export default function Leadership() {
     return (
         <>
             <Hero
+                className="hero--extra-padding"
                 headline="Leadership That Executes"
                 subheadline="Under strong leadership, Veritas Consulting operates with clear governance, accountability, and ethical responsibility—giving global clients confidence in every decision made in India."
                 pillText="Leadership & Governance"

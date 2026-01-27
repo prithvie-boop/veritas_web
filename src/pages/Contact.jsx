@@ -1,6 +1,7 @@
 import { Hero, BentoGrid, BentoCard } from '../components/sections';
 import { Send, CheckCircle, Mail, Phone, MapPin, Building2, User, Briefcase } from 'lucide-react';
 import { useState } from 'react';
+import { countries } from '../constants/countries';
 
 const partnerQualities = [
     { text: 'Value quality and consistency', icon: CheckCircle },
@@ -14,6 +15,7 @@ export default function Contact() {
         email: '',
         phone: '',
         company: '',
+        country: '',
         designation: '',
         message: ''
     });
@@ -93,7 +95,7 @@ export default function Contact() {
                                         }}>
                                             <Mail size={18} color="var(--color-accent)" />
                                         </div>
-                                        <span style={{ fontSize: 'var(--font-size-base)' }}>info@veritasconsulting.in</span>
+                                        <span style={{ fontSize: 'var(--font-size-base)' }}>manmeit@veritasconsulting.in</span>
                                     </div>
 
                                     <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--spacing-4)' }}>
@@ -191,6 +193,27 @@ export default function Contact() {
                                             placeholder="Company name"
                                         />
                                     </div>
+                                </div>
+
+                                <div>
+                                    <label htmlFor="country">Country</label>
+                                    <select
+                                        id="country"
+                                        name="country"
+                                        value={formData.country}
+                                        onChange={handleChange}
+                                        required
+                                        style={{
+                                            color: formData.country === '' ? 'rgba(255, 255, 255, 0.4)' : 'var(--color-text-light)'
+                                        }}
+                                    >
+                                        <option value="" disabled>Select a country</option>
+                                        {countries.map((country, index) => (
+                                            <option key={index} value={country} style={{ color: 'var(--color-text-primary)' }}>
+                                                {country}
+                                            </option>
+                                        ))}
+                                    </select>
                                 </div>
 
                                 <div>

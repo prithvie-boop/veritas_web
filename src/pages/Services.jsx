@@ -114,6 +114,7 @@ export default function Services() {
     return (
         <>
             <Hero
+                className="hero--extra-padding"
                 headline="End-to-End Merchandising & Sourcing Solutions"
                 subheadline="Our services are designed to support clients across the entire product lifecycle—from concept and cost engineering to production execution and delivery."
                 pillText="Service Portfolio"

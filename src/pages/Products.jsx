@@ -61,16 +61,17 @@ export default function Products() {
     return (
         <>
             <Hero
+                className="hero--extra-padding"
                 headline="Product Categories We Work In"
                 subheadline="Complete coverage across Hard Goods and Soft Goods for the home industry. From intricate textiles to heavy furniture, we manage vendors across the entire home spectrum."
                 pillText="Our Categories"
                 backgroundImage="/assets/images/pexels-roman-odintsov-6332015.jpg"
             />
 
-            <BentoGrid title="Hard Goods">
-                {hardGoods.map((cat, i) => {
+            <BentoGrid title="Soft Goods (Home Textiles)">
+                {softGoods.map((cat, i) => {
                     const Icon = cat.icon;
-                    const variants = ['light', 'dark', 'accent', 'light', 'dark'];
+                    const variants = ['dark', 'light', 'accent', 'dark', 'light'];
                     const variant = variants[i % 5];
                     const isDark = variant === 'dark';
                     const isAccent = variant === 'accent';
@@ -78,12 +79,12 @@ export default function Products() {
                     return (
                         <BentoCard
                             key={i}
-                            span={i === 0 ? 2 : 1}
+                            span={i === 3 ? 2 : 1}
                             className={`bento-card--${variant}`}
                         >
                             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
                                 <div className={`pill-tag ${isDark ? 'pill-tag--dark' : ''}`} style={isAccent ? { background: 'var(--color-primary)', color: 'var(--color-accent)' } : {}}>
-                                    Hard Goods
+                                    Soft Goods
                                 </div>
                                 <div style={{
                                     background: isDark ? 'var(--color-accent)' : isAccent ? 'var(--color-primary)' : 'var(--color-primary)',
@@ -129,10 +130,10 @@ export default function Products() {
                 })}
             </BentoGrid>
 
-            <BentoGrid title="Soft Goods (Home Textiles)">
-                {softGoods.map((cat, i) => {
+            <BentoGrid title="Hard Goods">
+                {hardGoods.map((cat, i) => {
                     const Icon = cat.icon;
-                    const variants = ['dark', 'light', 'accent', 'dark', 'light'];
+                    const variants = ['light', 'dark', 'accent', 'light', 'dark'];
                     const variant = variants[i % 5];
                     const isDark = variant === 'dark';
                     const isAccent = variant === 'accent';
@@ -140,12 +141,12 @@ export default function Products() {
                     return (
                         <BentoCard
                             key={i}
-                            span={i === 3 ? 2 : 1}
+                            span={i === 0 ? 2 : 1}
                             className={`bento-card--${variant}`}
                         >
                             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
                                 <div className={`pill-tag ${isDark ? 'pill-tag--dark' : ''}`} style={isAccent ? { background: 'var(--color-primary)', color: 'var(--color-accent)' } : {}}>
-                                    Soft Goods
+                                    Hard Goods
                                 </div>
                                 <div style={{
                                     background: isDark ? 'var(--color-accent)' : isAccent ? 'var(--color-primary)' : 'var(--color-primary)',

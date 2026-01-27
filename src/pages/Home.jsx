@@ -38,6 +38,7 @@ export default function Home() {
     return (
         <>
             <Hero
+                className="hero--extra-padding"
                 headline="Complete Home Merchandising & Sourcing Solutions"
                 subheadline="Your Strategic Sourcing, Merchandising, and Quality Partner in India. We partner with global retailers, brands, importers, and buying houses to deliver end-to-end home merchandising solutions."
                 pillText="Your India Partner"
