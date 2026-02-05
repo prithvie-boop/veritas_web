@@ -130,7 +130,7 @@ export default function Contact() {
                                         }}>
                                             <Mail size={18} color="var(--color-accent)" />
                                         </div>
-                                        <span style={{ fontSize: 'var(--font-size-base)' }}>manmeit@veritasconsulting.in</span>
+                                        <span style={{ fontSize: 'var(--font-size-base)' }}>Manmeit@veritasconsulting.global</span>
                                     </div>
 
                                     <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--spacing-4)' }}>
@@ -146,7 +146,7 @@ export default function Contact() {
                                         }}>
                                             <Phone size={18} color="var(--color-accent)" />
                                         </div>
-                                        <span style={{ fontSize: 'var(--font-size-base)' }}>+91 98110 55555</span>
+                                        <span style={{ fontSize: 'var(--font-size-base)' }}>+91-9811339092</span>
                                     </div>
 
                                     <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--spacing-4)' }}>
@@ -162,7 +162,7 @@ export default function Contact() {
                                         }}>
                                             <MapPin size={18} color="var(--color-accent)" />
                                         </div>
-                                        <span style={{ fontSize: 'var(--font-size-base)' }}>45/89, Okhla Phase III, New Delhi, India</span>
+                                        <span style={{ fontSize: 'var(--font-size-base)' }}>Sigma 1, Greater Noida, Uttar Pradesh, India</span>
                                     </div>
                                 </div>
                             </div>
