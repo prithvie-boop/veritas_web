@@ -1,7 +1,11 @@
 import { Hero, BentoGrid, BentoCard } from '../components/sections';
-import { Send, CheckCircle, Mail, Phone, MapPin, Building2, User, Briefcase } from 'lucide-react';
+import { Send, CheckCircle, Mail, Phone, MapPin, Building2, User, Briefcase, Loader2 } from 'lucide-react';
 import { useState } from 'react';
 import { countries } from '../constants/countries';
+import './Contact.css';
+
+// Replace with your Google Apps Script Web App URL
+const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzWmm0xZZWNdZesLBdOQ70mxZX5KzqsgQiBDwaRSile8W8axoTgNsMsOrgWOVzJSq0cFQ/exec';
 
 const partnerQualities = [
     { text: 'Value quality and consistency', icon: CheckCircle },
@@ -19,14 +23,45 @@ export default function Contact() {
         designation: '',
         message: ''
     });
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [submitStatus, setSubmitStatus] = useState(null); // 'success' | 'error' | null
 
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log('Form submitted:', formData);
+        setIsSubmitting(true);
+        setSubmitStatus(null);
+
+        try {
+            const response = await fetch(GOOGLE_SCRIPT_URL, {
+                method: 'POST',
+                mode: 'no-cors', // Required for Google Apps Script
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            });
+
+            // With no-cors, we can't read the response, so assume success if no error thrown
+            setSubmitStatus('success');
+            setFormData({
+                name: '',
+                email: '',
+                phone: '',
+                company: '',
+                country: '',
+                designation: '',
+                message: ''
+            });
+        } catch (error) {
+            console.error('Form submission error:', error);
+            setSubmitStatus('error');
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
     return (
@@ -40,7 +75,7 @@ export default function Contact() {
 
             <section style={{ padding: 'var(--section-padding) 0' }}>
                 <div className="container">
-                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'var(--spacing-16)', alignItems: 'start' }}>
+                    <div className="contact-grid">
 
                         {/* Left Column - Content */}
                         <div>
@@ -241,9 +276,45 @@ export default function Contact() {
                                     />
                                 </div>
 
-                                <button type="submit" className="btn btn--primary btn--lg" style={{ marginTop: 'var(--spacing-4)', width: '100%', background: 'var(--color-accent)', color: 'var(--color-primary)' }}>
-                                    Send Message <Send size={18} />
+                                <button
+                                    type="submit"
+                                    className="btn btn--primary btn--lg"
+                                    style={{ marginTop: 'var(--spacing-4)', width: '100%', background: 'var(--color-accent)', color: 'var(--color-primary)' }}
+                                    disabled={isSubmitting}
+                                >
+                                    {isSubmitting ? (
+                                        <>Sending... <Loader2 size={18} className="spin" /></>
+                                    ) : (
+                                        <>Send Message <Send size={18} /></>
+                                    )}
                                 </button>
+
+                                {submitStatus === 'success' && (
+                                    <div style={{
+                                        marginTop: 'var(--spacing-4)',
+                                        padding: 'var(--spacing-4)',
+                                        background: 'rgba(34, 197, 94, 0.2)',
+                                        borderRadius: 'var(--radius-lg)',
+                                        color: '#22c55e',
+                                        textAlign: 'center'
+                                    }}>
+                                        <CheckCircle size={20} style={{ display: 'inline', marginRight: '8px', verticalAlign: 'middle' }} />
+                                        Thank you! Your message has been sent successfully.
+                                    </div>
+                                )}
+
+                                {submitStatus === 'error' && (
+                                    <div style={{
+                                        marginTop: 'var(--spacing-4)',
+                                        padding: 'var(--spacing-4)',
+                                        background: 'rgba(239, 68, 68, 0.2)',
+                                        borderRadius: 'var(--radius-lg)',
+                                        color: '#ef4444',
+                                        textAlign: 'center'
+                                    }}>
+                                        Something went wrong. Please try again or email us directly.
+                                    </div>
+                                )}
                             </form>
                         </div>
                     </div>
