@@ -130,7 +130,7 @@ export default function Contact() {
                                         }}>
                                             <Mail size={18} color="var(--color-accent)" />
                                         </div>
-                                        <span style={{ fontSize: 'var(--font-size-base)' }}>Manmeit@veritasconsulting.global</span>
+                                        <span style={{ fontSize: 'var(--font-size-base)' }}>manmeitsikka@veritasconsulting.global</span>
                                     </div>
 
                                     <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--spacing-4)' }}>

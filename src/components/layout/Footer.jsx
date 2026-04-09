@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Linkedin, Twitter, Instagram, Send } from 'lucide-react';
+import { Linkedin } from 'lucide-react';
 import './Footer.css';
 
 export default function Footer() {
@@ -38,9 +38,7 @@ export default function Footer() {
                             Your eyes and ears on the ground.
                         </p>
                         <div className="footer__socials">
-                            <a href="#" className="social-icon"><Linkedin size={20} /></a>
-                            <a href="#" className="social-icon"><Instagram size={20} /></a>
-                            <a href="#" className="social-icon"><Twitter size={20} /></a>
+                            <a href="https://www.linkedin.com/company/veritasconsulting-global/?viewAsMember=true" target="_blank" rel="noopener noreferrer" className="social-icon"><Linkedin size={20} /></a>
                         </div>
                     </div>
 
@@ -48,7 +46,7 @@ export default function Footer() {
                         <div className="footer__col">
                             <h4>Contact Us</h4>
                             <p>+91-9811339092</p>
-                            <p>Manmeit@veritasconsulting.global</p>
+                            <p>manmeitsikka@veritasconsulting.global</p>
                         </div>
                         <div className="footer__col">
                             <h4>Location</h4>
